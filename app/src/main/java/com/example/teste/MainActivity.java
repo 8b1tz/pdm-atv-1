@@ -17,11 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         button.setOnClickListener(view -> {
             TextView textView1 = (TextView) findViewById(R.id.textView1);
-            textView1.setText("Type: " + Build.TYPE +
-                    "\n" + "Board: " +Build.BOARD +
-                    "\n"+"Bootloarder: " +Build.BOOTLOADER +
-                    "\n"+"Brand: "+Build.BRAND+
-                    "\n"+"Device:"+Build.DEVICE);
+            textView1.setText(Build.DEVICE);
         });
     }
 }
