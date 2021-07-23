@@ -10,14 +10,18 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView textView1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button button = findViewById(R.id.button);
+        this.textView1 = findViewById(R.id.textView1);
+
         button.setOnClickListener(view -> {
-            TextView textView1 = (TextView) findViewById(R.id.textView1);
-            textView1.setText(Build.DEVICE);
+            this.textView1.setText(Build.DEVICE);
         });
     }
 }
